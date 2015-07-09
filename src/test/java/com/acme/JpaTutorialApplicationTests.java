@@ -8,6 +8,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.acme.order.customer.Customer;
 import com.acme.order.customer.CustomerRepository;
+import com.acme.order.customer.CustomerType;
 import com.acme.order.pizza.PizzaOrderService;
 import com.acme.order.pizza.PizzaType;
 import com.google.common.collect.Lists;
@@ -33,5 +34,12 @@ public class JpaTutorialApplicationTests {
 		pizzaOrderService.createOrder(customer1, PizzaType.BIG);
 		pizzaOrderService.createOrder(customer2, PizzaType.SMALL);
 	}
+	
+	@Test
+	public void givenNormaCustomer(){
+		CustomerType customerType  = new CustomerType();
+		Customer customer1 = new Customer(null, "jan", "jan@email.com", "zielona");
+		
+		
 
 }
